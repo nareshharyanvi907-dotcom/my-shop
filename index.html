@@ -3,220 +3,198 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shree Ram Furniture & Electronic House</title>
+
+<title>Shree Ram Furniture & Electronic House – Rania Haryana</title>
+
+<meta name="description" content="Shree Ram Furniture & Electronic House Rania Haryana – Best furniture & electronic store. Sofa, Bed, Mattress, LED, Fridge, Washing Machine, Geyser, Cooler, Inverter & more.">
+<meta name="keywords" content="shree ram furniture rania, furniture shop in rania, electronic store rania, sofa bed mattress rania">
+<meta name="robots" content="index, follow">
 
 <style>
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:linear-gradient(135deg,#fff3e6,#ffffff);
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#f5f6fa}
 
-/* Header */
 header{
-background:#8b0000;
+background:linear-gradient(135deg,#ff7b00,#ffb347);
+padding:15px;
 color:white;
-padding:14px;
 text-align:center;
-font-size:20px;
-font-weight:bold;
 }
 
-/* Slider */
-.slider{
-width:100%;
-overflow:hidden;
-border-radius:0 0 20px 20px;
-}
-.slides{
+nav{
 display:flex;
-animation:slide 15s infinite;
-}
-.slides img{
-width:100%;
-flex-shrink:0;
-height:220px;
-object-fit:cover;
-}
-@keyframes slide{
-0%{transform:translateX(0);}
-25%{transform:translateX(-100%);}
-50%{transform:translateX(-200%);}
-75%{transform:translateX(-300%);}
-100%{transform:translateX(0);}
-}
-
-/* Category Buttons */
-.category-bar{
-display:flex;
+flex-wrap:wrap;
+justify-content:center;
 gap:8px;
 padding:10px;
-overflow-x:auto;
 background:#fff;
 }
-.category-bar button{
-padding:7px 12px;
+
+nav button{
 border:none;
+padding:8px 12px;
 border-radius:20px;
-background:#ffe0cc;
-font-weight:bold;
+background:#ff7b00;
+color:white;
+cursor:pointer;
+font-size:13px;
 }
 
-/* Products */
+.banner{
+width:100%;
+height:200px;
+overflow:hidden;
+}
+
+.banner img{
+width:100%;
+height:200px;
+object-fit:cover;
+animation:slide 12s infinite;
+}
+
+@keyframes slide{
+0%{opacity:1}
+33%{opacity:0}
+66%{opacity:1}
+}
+
 .product-grid{
 display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-padding:12px;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:15px;
+padding:15px;
 }
 
 .product{
 background:white;
-border-radius:12px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,.1);
 overflow:hidden;
-box-shadow:0 4px 10px rgba(0,0,0,.1);
 }
 
 .product img{
 width:100%;
-height:150px;
+height:160px;
 object-fit:cover;
 }
 
-.p{padding:6px;font-weight:bold;}
-.price{color:#b30000;}
-.war{color:green;font-size:13px;}
+.p{
+padding:5px 8px;
+font-size:14px;
+}
+
+.price{color:green;font-weight:bold}
+.war{color:#ff7b00}
 
 .actions{
 display:flex;
-gap:6px;
-padding:6px;
+justify-content:space-between;
+padding:8px;
 }
 
 .actions button,.actions a{
 flex:1;
+margin:2px;
 padding:7px;
 border:none;
-border-radius:6px;
-font-weight:bold;
+border-radius:5px;
 text-align:center;
-text-decoration:none;
-}
-
-.cart{background:#ff9800;color:white;}
-.buy{background:#25d366;color:white;}
-
-.cart-float{
-position:fixed;
-bottom:80px;
-right:15px;
-background:#ff9800;
 color:white;
-padding:10px 14px;
-border-radius:50%;
-font-weight:bold;
+text-decoration:none;
+font-size:13px;
 }
 
-.wa{
-position:fixed;
-bottom:15px;
-right:15px;
-background:#25d366;
-padding:12px;
-border-radius:50%;
+.cart{background:#444}
+.buy{background:#25d366}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:20px;
 }
-.wa img{width:30px;}
 </style>
 </head>
 
 <body>
 
-<header>Shree Ram Furniture & Electronic House</header>
+<h1 style="display:none">Shree Ram Furniture & Electronic House – Rania Haryana</h1>
 
-<div class="slider">
-<div class="slides">
-<img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed">
+<header>
+<h2>Shree Ram Furniture & Electronic House</h2>
+<p>Rania, Haryana</p>
+</header>
+
+<div class="banner">
 <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-<img src="https://images.unsplash.com/photo-1586201375761-83865001e31b">
-<img src="https://images.unsplash.com/photo-1593784991095-a205069470b6">
-</div>
 </div>
 
-<div class="category-bar">
-<button onclick="filterProducts('all')">All</button>
-<button onclick="filterProducts('sofa')">Sofa</button>
-<button onclick="filterProducts('bed')">Bed</button>
-<button onclick="filterProducts('mattress')">Mattress</button>
-<button onclick="filterProducts('fridge')">Fridge</button>
-<button onclick="filterProducts('washing')">Washing</button>
-<button onclick="filterProducts('tv')">LED TV</button>
-<button onclick="filterProducts('gizer')">Geyser</button>
-<button onclick="filterProducts('dressing')">Dressing</button>
-<button onclick="filterProducts('almira')">Almira</button>
-<button onclick="filterProducts('fan')">Fan</button>
-<button onclick="filterProducts('heater')">Heater</button>
-<button onclick="filterProducts('iron')">Iron</button>
-<button onclick="filterProducts('juicer')">Juicer</button>
-<button onclick="filterProducts('mixer')">Mixer</button>
-<button onclick="filterProducts('inverter')">Inverter</button>
-<button onclick="filterProducts('battery')">Battery</button>
-<button onclick="filterProducts('kettle')">Kettle</button>
-</div>
+<nav>
+<button onclick="filter('all')">All</button>
+<button onclick="filter('sofa')">Sofa</button>
+<button onclick="filter('bed')">Bed</button>
+<button onclick="filter('mattress')">Mattress</button>
+<button onclick="filter('fridge')">Fridge</button>
+<button onclick="filter('washing')">Washing</button>
+<button onclick="filter('led')">LED</button>
+<button onclick="filter('gizer')">Geyser</button>
+<button onclick="filter('cooler')">Cooler</button>
+<button onclick="filter('fan')">Fan</button>
+<button onclick="filter('mixer')">Mixer</button>
+<button onclick="filter('inverter')">Inverter</button>
+</nav>
 
-<div class="product-grid">
+<div class="product-grid" id="products"></div>
 
-<!-- SOFA -->
-<div class="product sofa"><img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed"><div class="p">Luxury Sofa</div><div class="p price">₹22,999</div><div class="p war">1 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Luxury Sofa">Buy</a></div></div>
-<div class="product sofa"><img src="https://images.unsplash.com/photo-1618220179428-22790b461013"><div class="p">Modern Sofa</div><div class="p price">₹19,999</div><div class="p war">1 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Modern Sofa">Buy</a></div></div>
-
-<!-- BED -->
-<div class="product bed"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"><div class="p">King Size Bed</div><div class="p price">₹18,999</div><div class="p war">5 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=King Size Bed">Buy</a></div></div>
-<div class="product bed"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"><div class="p">Double Bed</div><div class="p price">₹15,999</div><div class="p war">5 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Double Bed">Buy</a></div></div>
-
-<!-- MATTRESS -->
-<div class="product mattress"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31b"><div class="p">Foam Mattress</div><div class="p price">₹7,999</div><div class="p war">10 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Foam Mattress">Buy</a></div></div>
-<div class="product mattress"><img src="https://images.unsplash.com/photo-1598300056393-4aac492f4344"><div class="p">Spring Mattress</div><div class="p price">₹9,999</div><div class="p war">10 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Spring Mattress">Buy</a></div></div>
-
-<!-- FRIDGE -->
-<div class="product fridge"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31b"><div class="p">Double Door Fridge</div><div class="p price">₹25,999</div><div class="p war">10 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Fridge">Buy</a></div></div>
-<div class="product fridge"><img src="https://images.unsplash.com/photo-1588854337112-bc8f9877ed1f"><div class="p">Single Door Fridge</div><div class="p price">₹14,999</div><div class="p war">10 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Single Door Fridge">Buy</a></div></div>
-
-<!-- WASHING -->
-<div class="product washing"><img src="https://images.unsplash.com/photo-1581579186989-61a3a6dffb99"><div class="p">Washing Machine</div><div class="p price">₹16,999</div><div class="p war">2 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Washing Machine">Buy</a></div></div>
-
-<!-- TV -->
-<div class="product tv"><img src="https://images.unsplash.com/photo-1593784991095-a205069470b6"><div class="p">Samsung LED TV</div><div class="p price">₹29,999</div><div class="p war">2 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=LED TV">Buy</a></div></div>
-
-<!-- GIZER -->
-<div class="product gizer"><img src="https://images.unsplash.com/photo-1616628182504-56f2434b4d6c"><div class="p">Water Geyser</div><div class="p price">₹6,999</div><div class="p war">2 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Geyser">Buy</a></div></div>
-
-<!-- DRESSING -->
-<div class="product dressing"><img src="https://images.unsplash.com/photo-1600585154084-4e5fe7c39198"><div class="p">Dressing Table</div><div class="p price">₹8,999</div><div class="p war">3 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Dressing Table">Buy</a></div></div>
-
-<!-- ALMIRA -->
-<div class="product almira"><img src="https://images.unsplash.com/photo-1616627455062-9f0c80d40d25"><div class="p">Wooden Almira</div><div class="p price">₹15,999</div><div class="p war">5 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Wooden Almira">Buy</a></div></div>
-
-<!-- FAN -->
-<div class="product fan"><img src="https://images.unsplash.com/photo-1616627454683-f05b3a5c16f7"><div class="p">Ceiling Fan</div><div class="p price">₹2,199</div><div class="p war">2 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Fan">Buy</a></div></div>
-
-</div>
-
-<div class="cart-float" id="cartCount">0</div>
-
-<a class="wa" href="https://wa.me/919812100187"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"></a>
+<footer>
+<h3>Shree Ram Furniture & Electronic House</h3>
+<p>Rania, Haryana, India</p>
+<p>Call / WhatsApp: 9812100187</p>
+</footer>
 
 <script>
-let cart=0;
-function addToCart(){
-cart++;
-document.getElementById("cartCount").innerHTML=cart;
-}
-function filterProducts(cat){
-document.querySelectorAll(".product").forEach(p=>{
-if(cat=="all"||p.classList.contains(cat)){p.style.display="block";}
-else{p.style.display="none";}
+const data=[
+{c:'sofa',n:'Luxury Sofa',p:'22999',w:'1 Year',i:'https://images.unsplash.com/photo-1615874959474-d609969a20ed'},
+{c:'sofa',n:'Modern Sofa',p:'18999',w:'1 Year',i:'https://images.unsplash.com/photo-1586023492125-27b2c045efd7'},
+{c:'bed',n:'King Size Bed',p:'24999',w:'5 Year',i:'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85'},
+{c:'bed',n:'Double Bed',p:'19999',w:'5 Year',i:'https://images.unsplash.com/photo-1555041469-a586c61ea9bc'},
+{c:'mattress',n:'Spring Mattress',p:'8999',w:'2 Year',i:'https://images.unsplash.com/photo-1616627987853-7c8d2f8d4f0f'},
+{c:'fridge',n:'Double Door Fridge',p:'28999',w:'10 Year',i:'https://images.unsplash.com/photo-1586201375761-83865001e17b'},
+{c:'washing',n:'Automatic Washing',p:'21999',w:'5 Year',i:'https://images.unsplash.com/photo-1581578731548-c64695cc6952'},
+{c:'led',n:'Smart LED TV',p:'17999',w:'2 Year',i:'https://images.unsplash.com/photo-1593784991095-a205069470b6'},
+{c:'gizer',n:'Electric Geyser',p:'6999',w:'3 Year',i:'https://images.unsplash.com/photo-1581578731762-010fd6d55c55'},
+{c:'cooler',n:'Desert Cooler',p:'9999',w:'1 Year',i:'https://images.unsplash.com/photo-1618219740975-d40978bb7378'},
+{c:'fan',n:'Ceiling Fan',p:'2499',w:'2 Year',i:'https://images.unsplash.com/photo-1606813902917-692ba3525c42'},
+{c:'mixer',n:'Mixer Grinder',p:'2999',w:'2 Year',i:'https://images.unsplash.com/photo-1586201375761-83865001e17b'},
+{c:'inverter',n:'Inverter + Battery',p:'18999',w:'3 Year',i:'https://images.unsplash.com/photo-1621905251189-08b45d6a269e'}
+];
+
+function show(list){
+let h='';
+list.forEach(x=>{
+h+=`
+<div class="product ${x.c}">
+<img src="${x.i}">
+<div class="p">${x.n}</div>
+<div class="p price">₹ ${x.p}</div>
+<div class="p war">${x.w}</div>
+<div class="actions">
+<button class="cart">Cart</button>
+<a class="buy" href="https://wa.me/919812100187?text=I want ${x.n}">Buy</a>
+</div>
+</div>`;
 });
+document.getElementById('products').innerHTML=h;
 }
+
+function filter(cat){
+if(cat=='all') show(data);
+else show(data.filter(x=>x.c==cat));
+}
+
+show(data);
 </script>
 
 </body>
