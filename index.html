@@ -1,20 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>Shree Ram Furniture & Electronic House</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="google-site-verification" content="RrZaUDdBxDjExkZBeLI6J9GHCzKI8bin6WBLL92e2s4" 
-  />/head>
-<body style="font-family:Arial;text-align:center;">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;font-family:Arial;background:#f6f6f6;}
+header{background:#fff;padding:15px;font-size:20px;font-weight:bold;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.1);}
+.section{padding:12px;}
+h2{margin:5px 0;}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.card{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.1);}
+.card img{width:100%;height:150px;object-fit:cover;}
+.info{padding:10px;text-align:center;}
+.price{color:#e91e63;font-weight:bold;}
+.guarantee{color:green;font-size:13px;}
+.buy{margin-top:8px;background:#25d366;color:white;border:none;padding:8px 15px;border-radius:20px;font-size:14px;}
+footer{text-align:center;padding:15px;background:#111;color:#fff;}
+</style>
+</head>
 
-<h1>Shree Ram Furniture & Electronic House</h1>
-<p>Best Furniture & Electronics Store – Order on WhatsApp</p>
+<body>
 
-<a href="https://wa.me/9812100187">
-<button style="padding:15px 25px;font-size:18px;">
-Buy Now on WhatsApp
-</button>
-</a>
+<header>Shree Ram Furniture & Electronic House</header>
+
+<div class="section">
+
+<h2>Sofa</h2>
+<div class="grid">
+  <div class="card">
+    <img src="SOFA_IMAGE_LINK">
+    <div class="info">
+      <div class="price">₹ 12,999</div>
+      <div class="guarantee">1 Year Guarantee</div>
+      <button class="buy" onclick="buy('Sofa - ₹12999')">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+<h2>Electronics</h2>
+<div class="grid">
+  <div class="card">
+    <img src="LED_IMAGE_LINK">
+    <div class="info">
+      <div class="price">₹ 18,999</div>
+      <div class="guarantee">2 Year Warranty</div>
+      <button class="buy" onclick="buy('LED TV - ₹18999')">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+<h2>Mattress</h2>
+<div class="grid">
+  <div class="card">
+    <img src="MATTRESS_IMAGE_LINK">
+    <div class="info">
+      <div class="price">₹ 6,499</div>
+      <div class="guarantee">5 Year Warranty</div>
+      <button class="buy" onclick="buy('Mattress - ₹6499')">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+<h2>Geyser</h2>
+<div class="grid">
+  <div class="card">
+    <img src="GEYSER_IMAGE_LINK">
+    <div class="info">
+      <div class="price">₹ 7,999</div>
+      <div class="guarantee">2 Year Warranty</div>
+      <button class="buy" onclick="buy('Geyser - ₹7999')">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+<h2>Almira</h2>
+<div class="grid">
+  <div class="card">
+    <img src="ALMIRA_IMAGE_LINK">
+    <div class="info">
+      <div class="price">₹ 14,999</div>
+      <div class="guarantee">1 Year Guarantee</div>
+      <button class="buy" onclick="buy('Almira - ₹14999')">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+<h2>Washing Machine</h2>
+<div class="grid">
+  <div class="card">
+    <img src="WASHING_IMAGE_LINK">
+    <div class="info">
+      <div class="price">₹ 16,999</div>
+      <div class="guarantee">2 Year Warranty</div>
+      <button class="buy" onclick="buy('Washing Machine - ₹16999')">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+<h2>Fridge</h2>
+<div class="grid">
+  <div class="card">
+    <img src="FRIDGE_IMAGE_LINK">
+    <div class="info">
+      <div class="price">₹ 19,999</div>
+      <div class="guarantee">2 Year Warranty</div>
+      <button class="buy" onclick="buy('Fridge - ₹19999')">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+<h2>Cooler</h2>
+<div class="grid">
+  <div class="card">
+    <img src="COOLER_IMAGE_LINK">
+    <div class="info">
+      <div class="price">₹ 6,999</div>
+      <div class="guarantee">1 Year Warranty</div>
+      <button class="buy" onclick="buy('Cooler - ₹6999')">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<footer>
+© 2026 Shree Ram Furniture & Electronic House<br>
+Order on WhatsApp
+</footer>
+
+<script>
+function buy(product){
+  window.location.href="https://wa.me/9812100187?text=I%20want%20to%20buy:%20"+product;
+}
+</script>
 
 </body>
 </html>
