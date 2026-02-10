@@ -1,93 +1,182 @@
-<h1 style="color:red">TEST UPDATE</h1>
-se<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shree Ram Furniture & Electronic House</title>
-  <style>
-    body{margin:0;font-family:Arial;background:#f6f6f6}
-    header{background:#8b0000;color:#fff;padding:12px;text-align:center;font-size:22px;font-weight:bold}
-    .banner{width:100%;height:220px;background:url('https://images.unsplash.com/photo-1582582429416-019c73c5f63c') center/cover no-repeat;display:flex;align-items:center;justify-content:center;color:#fff;font-size:26px;font-weight:bold}
-    .cats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:10px}
-    .cat{background:#fff;padding:10px;border-radius:10px;text-align:center;font-weight:bold}
-    .products{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:12px}
-    .card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 0 8px rgba(0,0,0,.1)}
-    .card img{width:100%;height:150px;object-fit:cover}
-    .card .p{padding:10px}
-    .price{color:#d40000;font-weight:bold}
-    .buy{display:block;text-align:center;background:green;color:#fff;padding:10px;border-radius:8px;margin-top:8px;text-decoration:none}
-    .wa{position:fixed;bottom:15px;right:15px;background:#25d366;color:#fff;padding:14px 18px;border-radius:50%;font-size:22px;text-decoration:none}
-    footer{text-align:center;background:#111;color:#fff;padding:10px;margin-top:15px}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shree Ram Furniture & Electronic House</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:linear-gradient(135deg,#f9f9f9,#fff0e6);
+}
+
+/* Header */
+header{
+background:#8b0000;
+color:white;
+padding:12px;
+text-align:center;
+font-size:20px;
+font-weight:bold;
+}
+
+/* Search */
+.search{
+padding:10px;
+}
+.search input{
+width:100%;
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:16px;
+}
+
+/* Banner */
+.banner{
+width:100%;
+height:220px;
+background:url('https://images.unsplash.com/photo-1615874959474-d609969a20ed') center/cover;
+border-radius:0 0 20px 20px;
+}
+
+/* Categories */
+.cats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+padding:12px;
+}
+.cat{
+background:white;
+padding:12px 5px;
+text-align:center;
+border-radius:12px;
+box-shadow:0 3px 6px rgba(0,0,0,0.1);
+font-size:14px;
+font-weight:bold;
+}
+
+/* Products */
+.products{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+padding:12px;
+}
+.card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 3px 6px rgba(0,0,0,0.1);
+}
+.card img{
+width:100%;
+height:160px;
+object-fit:cover;
+}
+.card .p{
+padding:10px;
+font-weight:bold;
+}
+.price{
+color:#b30000;
+font-size:18px;
+font-weight:bold;
+}
+.war{
+color:green;
+font-size:13px;
+margin-top:3px;
+}
+.buy{
+display:block;
+background:#25d366;
+color:white;
+text-align:center;
+padding:10px;
+margin:10px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* Floating WhatsApp */
+.wa{
+position:fixed;
+bottom:18px;
+right:18px;
+background:#25d366;
+padding:14px;
+border-radius:50%;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+.wa img{width:30px;}
+</style>
+
 </head>
 <body>
 
 <header>Shree Ram Furniture & Electronic House</header>
 
-<div class="banner">Best Furniture & Electronics Store</div>
+<div class="search">
+<input type="text" placeholder="Search Products...">
+</div>
+
+<div class="banner"></div>
 
 <div class="cats">
-  <div class="cat">Sofa</div>
-  <div class="cat">Beds</div>
-  <div class="cat">LED TV</div>
-  <div class="cat">Fridge</div>
-  <div class="cat">Washing Machine</div>
-  <div class="cat">Geyser</div>
-  <div class="cat">Cooler</div>
-  <div class="cat">Dressing Set</div>
+<div class="cat">Sofa</div>
+<div class="cat">Beds</div>
+<div class="cat">LED TV</div>
+<div class="cat">Fridge</div>
+<div class="cat">Washing</div>
+<div class="cat">Geyser</div>
+<div class="cat">Cooler</div>
+<div class="cat">Dressing</div>
 </div>
 
 <div class="products">
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1582582429416-019c73c5f63c">
-    <div class="p">
-      <b>Luxury Sofa Set</b><br>
-      <span class="price">₹ 22,999</span><br>
-      5 Year Guarantee
-      <a class="buy" href="https://wa.me/919812100187?text=I want to buy Luxury Sofa Set">Buy Now on WhatsApp</a>
-    </div>
-  </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed">
+<div class="p">Luxury Sofa Set</div>
+<div class="p price">₹ 22,999</div>
+<div class="p war">1 Year Warranty</div>
+<a class="buy" href="https://wa.me/919812100187?text=I want Luxury Sofa Set">Buy on WhatsApp</a>
+</div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1601972599722-bb9a1b2c1d1b">
-    <div class="p">
-      <b>King Size Bed</b><br>
-      <span class="price">₹ 18,999</span><br>
-      5 Year Guarantee
-      <a class="buy" href="https://wa.me/919812100187?text=I want to buy King Size Bed">Buy Now on WhatsApp</a>
-    </div>
-  </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+<div class="p">King Size Bed</div>
+<div class="p price">₹ 18,999</div>
+<div class="p war">5 Year Warranty</div>
+<a class="buy" href="https://wa.me/919812100187?text=I want King Size Bed">Buy on WhatsApp</a>
+</div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1">
-    <div class="p">
-      <b>LED Smart TV</b><br>
-      <span class="price">₹ 15,999</span><br>
-      2 Year Warranty
-      <a class="buy" href="https://wa.me/919812100187?text=I want to buy LED TV">Buy Now on WhatsApp</a>
-    </div>
-  </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1593784991095-a205069470b6">
+<div class="p">Samsung LED TV</div>
+<div class="p price">₹ 29,999</div>
+<div class="p war">2 Year Warranty</div>
+<a class="buy" href="https://wa.me/919812100187?text=I want LED TV">Buy on WhatsApp</a>
+</div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1580910051074-7f38f2b7c1b1">
-    <div class="p">
-      <b>Double Door Fridge</b><br>
-      <span class="price">₹ 19,999</span><br>
-      10 Year Compressor Warranty
-      <a class="buy" href="https://wa.me/919812100187?text=I want to buy Fridge">Buy Now on WhatsApp</a>
-    </div>
-  </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1586201375761-83865001e31b">
+<div class="p">Double Door Fridge</div>
+<div class="p price">₹ 25,499</div>
+<div class="p war">10 Year Compressor Warranty</div>
+<a class="buy" href="https://wa.me/919812100187?text=I want Fridge">Buy on WhatsApp</a>
+</div>
 
 </div>
 
-<a class="wa" href="https://wa.me/919812100187">💬</a>
-
-<footer>
-  © 2026 Shree Ram Furniture & Electronic House<br>
-  Call / WhatsApp: 9812100187
-</footer>
+<a class="wa" href="https://wa.me/919812100187">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
 
 </body>
 </html>
