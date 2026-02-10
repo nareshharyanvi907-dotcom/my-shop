@@ -9,7 +9,7 @@
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background:linear-gradient(135deg,#fff1e6,#ffffff);
+background:linear-gradient(135deg,#fff3e6,#ffffff);
 }
 
 /* Header */
@@ -22,18 +22,6 @@ font-size:20px;
 font-weight:bold;
 }
 
-/* Search */
-.search{
-padding:10px;
-}
-.search input{
-width:100%;
-padding:12px;
-border-radius:10px;
-border:1px solid #ccc;
-font-size:16px;
-}
-
 /* Slider */
 .slider{
 width:100%;
@@ -42,7 +30,7 @@ border-radius:0 0 20px 20px;
 }
 .slides{
 display:flex;
-animation:slide 12s infinite;
+animation:slide 15s infinite;
 }
 .slides img{
 width:100%;
@@ -50,27 +38,27 @@ flex-shrink:0;
 height:220px;
 object-fit:cover;
 }
-
 @keyframes slide{
 0%{transform:translateX(0);}
-33%{transform:translateX(-100%);}
-66%{transform:translateX(-200%);}
+25%{transform:translateX(-100%);}
+50%{transform:translateX(-200%);}
+75%{transform:translateX(-300%);}
 100%{transform:translateX(0);}
 }
 
 /* Category Buttons */
 .category-bar{
 display:flex;
-gap:10px;
+gap:8px;
 padding:10px;
 overflow-x:auto;
+background:#fff;
 }
 .category-bar button{
-padding:8px 14px;
+padding:7px 12px;
 border:none;
 border-radius:20px;
-background:white;
-box-shadow:0 3px 6px rgba(0,0,0,.1);
+background:#ffe0cc;
 font-weight:bold;
 }
 
@@ -86,34 +74,30 @@ padding:12px;
 background:white;
 border-radius:12px;
 overflow:hidden;
-box-shadow:0 4px 10px rgba(0,0,0,.08);
+box-shadow:0 4px 10px rgba(0,0,0,.1);
 }
 
 .product img{
 width:100%;
-height:160px;
+height:150px;
 object-fit:cover;
 }
 
-.product .p{
-padding:8px;
-font-weight:bold;
-}
-
-.price{color:#b30000;font-size:17px;}
+.p{padding:6px;font-weight:bold;}
+.price{color:#b30000;}
 .war{color:green;font-size:13px;}
 
 .actions{
 display:flex;
-gap:8px;
-padding:8px;
+gap:6px;
+padding:6px;
 }
 
 .actions button,.actions a{
 flex:1;
-padding:8px;
+padding:7px;
 border:none;
-border-radius:8px;
+border-radius:6px;
 font-weight:bold;
 text-align:center;
 text-decoration:none;
@@ -122,28 +106,24 @@ text-decoration:none;
 .cart{background:#ff9800;color:white;}
 .buy{background:#25d366;color:white;}
 
-/* Floating Cart */
 .cart-float{
 position:fixed;
 bottom:80px;
-right:18px;
+right:15px;
 background:#ff9800;
 color:white;
-padding:12px 14px;
+padding:10px 14px;
 border-radius:50%;
 font-weight:bold;
-box-shadow:0 4px 10px rgba(0,0,0,.3);
 }
 
-/* WhatsApp */
 .wa{
 position:fixed;
-bottom:18px;
-right:18px;
+bottom:15px;
+right:15px;
 background:#25d366;
-padding:14px;
+padding:12px;
 border-radius:50%;
-box-shadow:0 4px 10px rgba(0,0,0,.3);
 }
 .wa img{width:30px;}
 </style>
@@ -153,107 +133,88 @@ box-shadow:0 4px 10px rgba(0,0,0,.3);
 
 <header>Shree Ram Furniture & Electronic House</header>
 
-<div class="search">
-<input type="text" placeholder="Search Products...">
-</div>
-
 <div class="slider">
 <div class="slides">
 <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed">
 <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
 <img src="https://images.unsplash.com/photo-1586201375761-83865001e31b">
+<img src="https://images.unsplash.com/photo-1593784991095-a205069470b6">
 </div>
 </div>
 
 <div class="category-bar">
 <button onclick="filterProducts('all')">All</button>
 <button onclick="filterProducts('sofa')">Sofa</button>
-<button onclick="filterProducts('bed')">Beds</button>
-<button onclick="filterProducts('tv')">LED TV</button>
+<button onclick="filterProducts('bed')">Bed</button>
+<button onclick="filterProducts('mattress')">Mattress</button>
 <button onclick="filterProducts('fridge')">Fridge</button>
+<button onclick="filterProducts('washing')">Washing</button>
+<button onclick="filterProducts('tv')">LED TV</button>
+<button onclick="filterProducts('gizer')">Geyser</button>
+<button onclick="filterProducts('dressing')">Dressing</button>
+<button onclick="filterProducts('almira')">Almira</button>
+<button onclick="filterProducts('fan')">Fan</button>
+<button onclick="filterProducts('heater')">Heater</button>
+<button onclick="filterProducts('iron')">Iron</button>
+<button onclick="filterProducts('juicer')">Juicer</button>
+<button onclick="filterProducts('mixer')">Mixer</button>
+<button onclick="filterProducts('inverter')">Inverter</button>
+<button onclick="filterProducts('battery')">Battery</button>
+<button onclick="filterProducts('kettle')">Kettle</button>
 </div>
 
 <div class="product-grid">
 
-<div class="product sofa">
-<img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed">
-<div class="p">Luxury Sofa</div>
-<div class="p price">₹ 22,999</div>
-<div class="p war">1 Year Warranty</div>
-<div class="actions">
-<button class="cart" onclick="addToCart()">Add</button>
-<a class="buy" href="https://wa.me/919812100187?text=I want Luxury Sofa">Buy</a>
-</div>
-</div>
+<!-- SOFA -->
+<div class="product sofa"><img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed"><div class="p">Luxury Sofa</div><div class="p price">₹22,999</div><div class="p war">1 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Luxury Sofa">Buy</a></div></div>
+<div class="product sofa"><img src="https://images.unsplash.com/photo-1618220179428-22790b461013"><div class="p">Modern Sofa</div><div class="p price">₹19,999</div><div class="p war">1 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Modern Sofa">Buy</a></div></div>
 
-<div class="product sofa">
-<img src="https://images.unsplash.com/photo-1618220179428-22790b461013">
-<div class="p">Modern Sofa</div>
-<div class="p price">₹ 19,999</div>
-<div class="p war">1 Year Warranty</div>
-<div class="actions">
-<button class="cart" onclick="addToCart()">Add</button>
-<a class="buy" href="https://wa.me/919812100187?text=I want Modern Sofa">Buy</a>
-</div>
-</div>
+<!-- BED -->
+<div class="product bed"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"><div class="p">King Size Bed</div><div class="p price">₹18,999</div><div class="p war">5 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=King Size Bed">Buy</a></div></div>
+<div class="product bed"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"><div class="p">Double Bed</div><div class="p price">₹15,999</div><div class="p war">5 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Double Bed">Buy</a></div></div>
 
-<div class="product bed">
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-<div class="p">King Size Bed</div>
-<div class="p price">₹ 18,999</div>
-<div class="p war">5 Year Warranty</div>
-<div class="actions">
-<button class="cart" onclick="addToCart()">Add</button>
-<a class="buy" href="https://wa.me/919812100187?text=I want King Size Bed">Buy</a>
-</div>
-</div>
+<!-- MATTRESS -->
+<div class="product mattress"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31b"><div class="p">Foam Mattress</div><div class="p price">₹7,999</div><div class="p war">10 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Foam Mattress">Buy</a></div></div>
+<div class="product mattress"><img src="https://images.unsplash.com/photo-1598300056393-4aac492f4344"><div class="p">Spring Mattress</div><div class="p price">₹9,999</div><div class="p war">10 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Spring Mattress">Buy</a></div></div>
 
-<div class="product tv">
-<img src="https://images.unsplash.com/photo-1593784991095-a205069470b6">
-<div class="p">Samsung LED TV</div>
-<div class="p price">₹ 29,999</div>
-<div class="p war">2 Year Warranty</div>
-<div class="actions">
-<button class="cart" onclick="addToCart()">Add</button>
-<a class="buy" href="https://wa.me/919812100187?text=I want LED TV">Buy</a>
-</div>
-</div>
+<!-- FRIDGE -->
+<div class="product fridge"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31b"><div class="p">Double Door Fridge</div><div class="p price">₹25,999</div><div class="p war">10 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Fridge">Buy</a></div></div>
+<div class="product fridge"><img src="https://images.unsplash.com/photo-1588854337112-bc8f9877ed1f"><div class="p">Single Door Fridge</div><div class="p price">₹14,999</div><div class="p war">10 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Single Door Fridge">Buy</a></div></div>
 
-<div class="product fridge">
-<img src="https://images.unsplash.com/photo-1586201375761-83865001e31b">
-<div class="p">Double Door Fridge</div>
-<div class="p price">₹ 25,999</div>
-<div class="p war">10 Year Compressor Warranty</div>
-<div class="actions">
-<button class="cart" onclick="addToCart()">Add</button>
-<a class="buy" href="https://wa.me/919812100187?text=I want Fridge">Buy</a>
-</div>
-</div>
+<!-- WASHING -->
+<div class="product washing"><img src="https://images.unsplash.com/photo-1581579186989-61a3a6dffb99"><div class="p">Washing Machine</div><div class="p price">₹16,999</div><div class="p war">2 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Washing Machine">Buy</a></div></div>
+
+<!-- TV -->
+<div class="product tv"><img src="https://images.unsplash.com/photo-1593784991095-a205069470b6"><div class="p">Samsung LED TV</div><div class="p price">₹29,999</div><div class="p war">2 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=LED TV">Buy</a></div></div>
+
+<!-- GIZER -->
+<div class="product gizer"><img src="https://images.unsplash.com/photo-1616628182504-56f2434b4d6c"><div class="p">Water Geyser</div><div class="p price">₹6,999</div><div class="p war">2 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Geyser">Buy</a></div></div>
+
+<!-- DRESSING -->
+<div class="product dressing"><img src="https://images.unsplash.com/photo-1600585154084-4e5fe7c39198"><div class="p">Dressing Table</div><div class="p price">₹8,999</div><div class="p war">3 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Dressing Table">Buy</a></div></div>
+
+<!-- ALMIRA -->
+<div class="product almira"><img src="https://images.unsplash.com/photo-1616627455062-9f0c80d40d25"><div class="p">Wooden Almira</div><div class="p price">₹15,999</div><div class="p war">5 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Wooden Almira">Buy</a></div></div>
+
+<!-- FAN -->
+<div class="product fan"><img src="https://images.unsplash.com/photo-1616627454683-f05b3a5c16f7"><div class="p">Ceiling Fan</div><div class="p price">₹2,199</div><div class="p war">2 Year Warranty</div><div class="actions"><button class="cart" onclick="addToCart()">Add</button><a class="buy" href="https://wa.me/919812100187?text=Fan">Buy</a></div></div>
 
 </div>
 
 <div class="cart-float" id="cartCount">0</div>
 
-<a class="wa" href="https://wa.me/919812100187">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-</a>
+<a class="wa" href="https://wa.me/919812100187"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"></a>
 
 <script>
-let cart = 0;
-
+let cart=0;
 function addToCart(){
 cart++;
-document.getElementById("cartCount").innerHTML = cart;
+document.getElementById("cartCount").innerHTML=cart;
 }
-
 function filterProducts(cat){
-let items = document.querySelectorAll(".product");
-items.forEach(el=>{
-if(cat=="all" || el.classList.contains(cat)){
-el.style.display="block";
-}else{
-el.style.display="none";
-}
+document.querySelectorAll(".product").forEach(p=>{
+if(cat=="all"||p.classList.contains(cat)){p.style.display="block";}
+else{p.style.display="none";}
 });
 }
 </script>
